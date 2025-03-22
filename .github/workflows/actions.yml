@@ -24,7 +24,7 @@ jobs:
         cp "LICENSE" "MonkeModManager/bin/Release/LICENSE.MonkeModManager.txt"
     - name: Upload Build
       if: startsWith(github.ref, 'refs/tags/') == false
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2 
       with:
         name: MonkeModManager-${{ github.sha }}
         path: ./MonkeModManager/bin/Release/
